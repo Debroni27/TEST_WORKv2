@@ -34,7 +34,6 @@ THIRD_PARTY = [
     'django_filters',
     'corsheaders',
     'versatileimagefield',
-    'ckeditor'
 ]
 
 LOCAL_APPS = [
@@ -125,7 +124,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
         'rest_framework.authentication.SessionAuthentication',
     ),
     "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
@@ -133,3 +131,9 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
 }
+
+DJANGORESIZED_DEFAULT_SIZE = [600, 600]
+DJANGORESIZED_DEFAULT_KEEP_META = True
+DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'WEBP'
+DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'WEBP': ".webp"}
+DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
